@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ControleEstacionamentos.Models;
 using ControleEstacionamentos.Repositories;
+using System.Text.RegularExpressions;
 
 namespace ControleEstacionamentos.Controllers
 {
@@ -21,7 +22,26 @@ namespace ControleEstacionamentos.Controllers
         [HttpPost]
         public ActionResult Login(FuncionarioViewModel model)
         {
-            Funcionario funcionario = repository.Read(model.CPF);
+            if(string.IsNullOrEmpty (model.Senha) || string.IsNullOrEmpty(model.CPF)) // Verificação de campos
+            {
+                return View(model);
+            }
+
+            string pattern = @"\.|-";
+            Regex rgx = new Regex(pattern);
+
+            string modelcpf = rgx.Replace(model.CPF, "");
+
+            Funcionario funcionario = repository.Read(modelcpf);
+
+            if(funcionario.cpf == null)
+            {
+                Console.WriteLine("Wrong cpf" + modelcpf);
+                ViewBag.Message = "CPF de Funcionário não encontrado";
+                return View(model);
+            }
+
+
             if(funcionario.senha == model.Senha)
             {
                 HttpContext.Session.SetInt32("Id", funcionario.id);
@@ -29,8 +49,12 @@ namespace ControleEstacionamentos.Controllers
 
                 return RedirectToAction("Index", "Home");
             }
-            ViewBag.Message = "CPF de Funcionário não encontrado";
-            return View(model);
+            else
+            {
+                Console.WriteLine("Wrong psswd");
+                ViewBag.Message = "Senha errada";
+                return View(model);
+            }
         }
     }
 }

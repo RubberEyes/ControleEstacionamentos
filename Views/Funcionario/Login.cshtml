@@ -22,7 +22,7 @@
 
             <div>
                 <label>CPF</label>
-                <input asp-for="CPF" class="form-control" />
+                <input id="txtCPF" asp-for="CPF" class="form-control" />
                 <span asp-validation-for="CPF"></span>
             </div>
 
@@ -40,3 +40,9 @@
     </div>
 </body>
 </html>
+
+@section Scripts {
+    <script>
+        $('#txtCPF').mask('000.000.000-00', { placeholder: "___.___.___-__"} , {reverse:true}).cleanVal();
+    </script>
+}

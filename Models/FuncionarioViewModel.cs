@@ -6,11 +6,11 @@ namespace ControleEstacionamentos.Models
     {
         [Required]
         [DataType(DataType.Text)]
-        public string CPF { get; set; }
+        public string? CPF { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
         [MinLength(6)]
-        public string Senha { get; set; }
+        public string? Senha { get; set; }
     }
 }
