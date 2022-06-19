@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/rubber/Coding/C# Projects/College Stuff/ControleEstacionamentos
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/rubber/Coding/C\# Projects/College Stuff/ControleEstacionamentos/Views/Funcionario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRnVuY2lvbmFyaW8vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/rubber/Coding/C\# Projects/College Stuff/ControleEstacionamentos/Views/Funcionario/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRnVuY2lvbmFyaW8vTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

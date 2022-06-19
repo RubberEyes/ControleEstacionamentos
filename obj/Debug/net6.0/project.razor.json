@@ -16313,6 +16313,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/rubber/Coding/C# Projects/College Stuff/ControleEstacionamentos/Views/Funcionario/Index.cshtml",
+      "TargetPath": "Views\\Funcionario\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/rubber/Coding/C# Projects/College Stuff/ControleEstacionamentos/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"

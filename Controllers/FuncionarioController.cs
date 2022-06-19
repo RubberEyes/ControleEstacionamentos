@@ -47,7 +47,7 @@ namespace ControleEstacionamentos.Controllers
                 HttpContext.Session.SetInt32("Id", funcionario.id);
                 HttpContext.Session.SetString("Nome", funcionario.nome);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Funcionario");
             }
             else
             {
@@ -55,6 +55,17 @@ namespace ControleEstacionamentos.Controllers
                 ViewBag.Message = "Senha errada";
                 return View(model);
             }
+        }
+
+        public ActionResult Index()
+        {
+            int? id = HttpContext.Session.GetInt32("Id");
+            if (id.HasValue)
+            {
+                List<Estacionamento> estacionamentos = repository.GetEstacionamentosAssociados(id.Value);
+                return View(estacionamentos);
+            }
+            return RedirectToAction("Login", "Funcionario");
         }
     }
 }

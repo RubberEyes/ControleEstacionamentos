@@ -4,6 +4,7 @@ namespace ControleEstacionamentos.Models
     {
         public Funcionario()
         {
+            
         }
 
         public Funcionario(int id, string nome, int status, string cpf, string senha)

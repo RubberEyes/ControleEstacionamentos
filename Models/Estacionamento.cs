@@ -7,16 +7,16 @@ namespace ControleEstacionamentos.Models
             
         }
 
-        public Estacionamento(int id, string nome, int status, string cpf, string senha)
+        public Estacionamento(int id, string nome, int status, string cnpj, string endereco)
         {
             this.id = id;
             this.nome = nome;
             this.status = status;
-            this.cpf = cpf;
-            this.senha = senha;
+            this.cnpj = cnpj;
+            this.endereco = endereco;
         }
 
-        public string cpf { get; set; }
-        public string senha { get; set;}
+        public string cnpj { get; set; }
+        public string endereco { get; set;}
     }
 }
