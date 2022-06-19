@@ -7,10 +7,10 @@ namespace ControleEstacionamentos.Repositories
         // private readonly string strConn = @"Data Source=192.168.56.101;
         // Initial Catalog=NiJPProj;
         // User Id=sa; Password=F4tecSQL!;";
-        private readonly string strConn = @"Data Source=localhost;
+        private readonly string strConn = @"Data Source=rubberhome.ddns.net;
         Initial Catalog=BDEstacionamentos;
-        User Id=sa; 
-        Password=P0tatoS4Uce!;";
+        User Id=est_worker; 
+        Password=cheeseC4ke!;";
 
 
          protected SqlConnection connection;
