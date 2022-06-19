@@ -20,7 +20,6 @@ public class HomeController : Controller
         {
             return RedirectToAction("Login", "Funcionario");
         }
-        Console.WriteLine(id);
         return View();
     }
 

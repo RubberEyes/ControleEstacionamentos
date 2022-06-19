@@ -13,6 +13,7 @@ namespace ControleEstacionamentos
             builder.Services.AddSession();
             builder.Services.AddTransient<IFuncionarioRepository, FuncionarioRepository>();
             builder.Services.AddTransient<IEstacionamentoRepository, EstacionamentoRepository>();
+            builder.Services.AddTransient<IVagaRepository, VagaRepository>();
 
             var app = builder.Build();
 
