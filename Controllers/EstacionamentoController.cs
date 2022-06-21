@@ -24,6 +24,7 @@ namespace ControleEstacionamentos.Controllers
                 return RedirectToAction("Login", "Funcionario");
             }
             List<Vaga> vagas = vagaRepository.GetVagas(id);
+            ViewBag.EstacionamentoId = id; 
 
             return View(vagas);
         }

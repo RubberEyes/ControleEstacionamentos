@@ -14,10 +14,10 @@ namespace ControleEstacionamentos.Controllers
         }
 
         [HttpGet]
-        public ActionResult Toggle(int id)
+        public void Toggle(int id)
         {
             repository.Toggle(id);
-            return View();
+            //return RedirectToAction("Index", "Estacionamento");
         }
     }
 }
