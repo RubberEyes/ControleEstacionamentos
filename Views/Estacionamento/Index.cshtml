@@ -1,5 +1,5 @@
-@{
-    ViewData["Title"] = "Vagas";
+﻿@{
+    ViewData["Title"] = "Estacionamentos";
 }
 
 <div class="row">
@@ -7,17 +7,25 @@
 
         <table class="table table-hover">
             <tr>
-                <th>Vagas</th>
-                <th>Ocupação</th>
+                <th>Estacionamento</th>
+                <th>Endereco</th>
                 <th>&nbsp;</th>
             </tr>
-            @foreach (Vaga v in Model)
+            @foreach (Estacionamento e in Model)
             {
                 <tr>
-                    <td>@v.id</td>
-                    <td>@(v.ocupado ? "Ocupada" : "Livre")</td>
+                    <td>@e.nome</td>
+                    <td>@e.endereco</td>
                     <td>
-                        <a href="/Vaga/Toggle/@v.id">Alterar Estado</a>
+                        <!-- <a href="/Vaga/Index/@e.id">Acessar</a> -->
+                        @Html.ActionLink(
+                            "Acessar",                  // linkText
+                            "Index",                    // actionName
+                            "Vaga",                       
+                            new {                       // routeValues
+                                id_estacionamento = @e.id, 
+                            }
+                        )
                     </td>
                 </tr>
             }

@@ -9,24 +9,27 @@ namespace ControleEstacionamentos.Controllers
     {
         private IEstacionamentoRepository repository;
         private IVagaRepository vagaRepository;
+        private IFuncionarioRepository funcionarioRepository;
 
-        public EstacionamentoController(IEstacionamentoRepository repository, IVagaRepository vagaRepository)
+        public EstacionamentoController(IEstacionamentoRepository repository, IVagaRepository vagaRepository, IFuncionarioRepository funcionarioRepository)
         {
             this.repository = repository;
             this.vagaRepository = vagaRepository;
+            this.funcionarioRepository = funcionarioRepository;
         }
 
-        public ActionResult Index(int id)
-        {
-            int? id_funcionario = HttpContext.Session.GetInt32("Id");
-            if(id_funcionario == null)
-            {
-                return RedirectToAction("Login", "Funcionario");
-            }
-            List<Vaga> vagas = vagaRepository.GetVagas(id);
-            ViewBag.EstacionamentoId = id; 
 
-            return View(vagas);
+
+        public ActionResult Index()
+        {
+            int? id = HttpContext.Session.GetInt32("IdFuncionario");
+            if (id.HasValue)
+            {
+                List<Estacionamento> estacionamentos = funcionarioRepository.GetEstacionamentosAssociados(id.Value);
+                
+                return View(estacionamentos);
+            }
+            return RedirectToAction("Login", "Funcionario");
         }
     }
 }

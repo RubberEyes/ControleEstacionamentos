@@ -44,10 +44,10 @@ namespace ControleEstacionamentos.Controllers
 
             if(funcionario.senha == model.Senha)
             {
-                HttpContext.Session.SetInt32("Id", funcionario.id);
-                HttpContext.Session.SetString("Nome", funcionario.nome);
+                HttpContext.Session.SetInt32("IdFuncionario", funcionario.id);
+                HttpContext.Session.SetString("NomeFuncionario", funcionario.nome);
 
-                return RedirectToAction("Index", "Funcionario");
+                return RedirectToAction("Index", "Estacionamento");
             }
             else
             {
@@ -59,12 +59,6 @@ namespace ControleEstacionamentos.Controllers
 
         public ActionResult Index()
         {
-            int? id = HttpContext.Session.GetInt32("Id");
-            if (id.HasValue)
-            {
-                List<Estacionamento> estacionamentos = repository.GetEstacionamentosAssociados(id.Value);
-                return View(estacionamentos);
-            }
             return RedirectToAction("Login", "Funcionario");
         }
     }

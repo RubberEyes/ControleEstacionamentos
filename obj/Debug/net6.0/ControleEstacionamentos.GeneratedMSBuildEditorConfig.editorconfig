@@ -19,10 +19,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXN0YWNpb25hbWVudG8vSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/rubber/Coding/C\# Projects/College Stuff/ControleEstacionamentos/Views/Funcionario/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRnVuY2lvbmFyaW8vSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [/home/rubber/Coding/C\# Projects/College Stuff/ControleEstacionamentos/Views/Funcionario/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRnVuY2lvbmFyaW8vTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -41,6 +37,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/rubber/Coding/C\# Projects/College Stuff/ControleEstacionamentos/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rubber/Coding/C\# Projects/College Stuff/ControleEstacionamentos/Views/Vaga/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmFnYS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/rubber/Coding/C\# Projects/College Stuff/ControleEstacionamentos/Views/_ViewImports.cshtml]

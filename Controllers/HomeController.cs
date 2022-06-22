@@ -15,7 +15,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        int? id = HttpContext.Session.GetInt32("Id");
+        int? id = HttpContext.Session.GetInt32("IdFuncionario");
         if(id == null)
         {
             return RedirectToAction("Login", "Funcionario");
